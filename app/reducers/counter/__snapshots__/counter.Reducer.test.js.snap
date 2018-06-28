@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterReducer counter Should handle DECREMENT action 1`] = `
+Object {
+  "counter": 0,
+}
+`;
+
+exports[`CounterReducer counter Should handle DECREMENT action: [object Object] 1`] = `
+Object {
+  "counter": 0,
+}
+`;
+
+exports[`CounterReducer counter Should handle INCREMENT action 1`] = `
+Object {
+  "counter": 2,
+}
+`;
+
+exports[`CounterReducer counter Should handle INCREMENT action: [object Object] 1`] = `
+Object {
+  "counter": 2,
+}
+`;
+
+exports[`CounterReducer counter Should handle unknown action 1`] = `
+Object {
+  "counter": 0,
+}
+`;
+
+exports[`CounterReducer counter Should handle unknown action: [object Object] 1`] = `
+Object {
+  "counter": 0,
+}
+`;
+
+exports[`CounterReducer counter Should provide the initial state: [object Object] 1`] = `
+Object {
+  "counter": 0,
+}
+`;

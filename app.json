@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Redux",
+    "icon": "./assets/icons/react.png",
+    "version": "1.0.0",
+    "slug": "272018",
+    "sdkVersion": "25.0.0",
+    "ios": {
+      "bundleIdentifier": "com.redux.app"
+    },
+    "android": {
+      "package": "com.redux.app"
+    }
+  },
+  "name": "Redux",
+  "displayName": "Redux"
+}

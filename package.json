@@ -1,0 +1,45 @@
+{
+  "name": "react-native-redux",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "jest-expo": "25.0.0",
+    "react-native-scripts": "1.11.1",
+    "react-test-renderer": "16.2.0",
+    "redux-mock-store": "^1.5.1"
+  },
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "dependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-to-json": "^3.3.1",
+    "eslint": "^4.16.0",
+    "expo": "^25.0.0",
+    "firebase": "^4.9.0",
+    "moment": "^2.20.1",
+    "native-base": "^2.3.7",
+    "prop-types": "^15.6.0",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-native-i18n": "^2.0.11",
+    "react-native-keyboard-aware-scroll-view": "^0.4.3",
+    "react-native-router-flux": "^4.0.0-beta.28",
+    "react-native-vector-icons": "^4.5.0",
+    "react-navigation": "^1.0.0-beta.27",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "relative-date": "^1.1.3"
+  }
+}
