@@ -1,4 +1,8 @@
 <p align="center">
+<img src="https://cdn-images-1.medium.com/max/668/1*shLO1GAdcJoleFYpbczHGQ.png" width="400"/>
+</p>
+
+<p align="center">
   <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4699.JPG" width="250"/>
   <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4728.JPG" width="250"/>
    <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4700.JPG" width="250"/>
