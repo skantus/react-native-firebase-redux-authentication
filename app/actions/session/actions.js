@@ -1,67 +1,60 @@
-import firebaseService from '../../enviroments/firebase';
-import * as types from './actionsTypes';
+import firebaseService from "../../enviroments/firebase";
+import * as types from "./actionsTypes";
 
-export const restoreSession = () => (
-  dispatch => {
-    dispatch(sessionLoading());
-    dispatch(sessionRestoring());
+export const restoreSession = () => dispatch => {
+  dispatch(sessionLoading());
+  dispatch(sessionRestoring());
 
-    firebaseService.auth()
-      .onAuthStateChanged(user => {
-        if (user) {
-          dispatch(sessionSuccess(user));
-        } else {
-          dispatch(sessionLogout());
-        }
-      });
-  }
-);
+  firebaseService.auth().onAuthStateChanged(user => {
+    if (user) {
+      dispatch(sessionSuccess(user));
+    } else {
+      dispatch(sessionLogout());
+    }
+  });
+};
 
-export const loginUser = (email, password) => (
-  dispatch => {
-    dispatch(sessionLoading());
+export const loginUser = (email, password) => dispatch => {
+  dispatch(sessionLoading());
 
-    firebaseService.auth()
-      .signInWithEmailAndPassword(email, password)
-      .then(user => {
-        dispatch(sessionSuccess(user));
-      })
-      .catch(error => {
-        dispatch(sessionError(error.message));
-      });
+  firebaseService
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then(user => {
+      dispatch(sessionSuccess(user));
+    })
+    .catch(error => {
+      dispatch(sessionError(error.message));
+    });
+};
 
-  }
-);
+export const signupUser = (email, password) => dispatch => {
+  dispatch(sessionLoading());
 
-export const signupUser = (email, password) => (
-  dispatch => {
-    dispatch(sessionLoading());
+  firebaseService
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then(user => {
+      dispatch(signupSuccess(user));
+    })
+    .catch(error => {
+      dispatch(sessionError(error.message));
+    });
+};
 
-    firebaseService.auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then(user => {
-        dispatch(signupSuccess(user));
-      })
-      .catch(error => {
-        dispatch(sessionError(error.message));
-      });
-  }
-);
+export const logoutUser = () => dispatch => {
+  dispatch(sessionLoading());
 
-export const logoutUser = () => (
-  dispatch => {
-    dispatch(sessionLoading());
-
-    firebaseService.auth()
-      .signOut()
-      .then(() => {
-        dispatch(sessionLogout());
-      })
-      .catch(error => {
-        dispatch(sessionError(error.message));
-      });
-  }
-);
+  firebaseService
+    .auth()
+    .signOut()
+    .then(() => {
+      dispatch(sessionLogout());
+    })
+    .catch(error => {
+      dispatch(sessionError(error.message));
+    });
+};
 
 const sessionRestoring = () => ({
   type: types.SESSION_RESTORING
