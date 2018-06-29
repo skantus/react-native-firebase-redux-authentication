@@ -11,6 +11,11 @@
      <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4730.JPG" width="250"/>
 </p>
 
+## Install
+
+1. _npm i_
+2. _react-native run-ios_ or _react-native run-android_
+
 ## Expo
 
 https://expo.io/@skantus/
