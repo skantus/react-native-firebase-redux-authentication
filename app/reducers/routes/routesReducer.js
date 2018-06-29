@@ -1,8 +1,8 @@
-import { ActionConst } from 'react-native-router-flux';
+import { ActionConst } from "react-native-router-flux";
 
 const initialState = {
-  scene: {},
-}
+  scene: {}
+};
 
 const routesReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -10,10 +10,10 @@ const routesReducer = (state = initialState, action) => {
       return {
         ...state,
         scene: action.scene
-      }
+      };
     default:
       return state;
   }
-}
+};
 
 export default routesReducer;
