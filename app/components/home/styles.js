@@ -1,26 +1,22 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    backgroundColor: '#e9f7fd',
-  },
-  image: {
-    width: 100,
-    height: 100,
+    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    backgroundColor: "#e9f7fd"
   },
   primary: {
-    color: 'rgb(116, 70, 195)'
+    color: "rgb(116, 70, 195)"
   },
   marginBox: {
-    alignItems: 'center',
+    alignItems: "center",
     margin: 20
   },
   title: {
-    fontSize: 24,
+    fontSize: 18,
     margin: 20
-  },
+  }
 });

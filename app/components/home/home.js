@@ -25,7 +25,7 @@ export class Home extends React.Component {
         </View>
 
         <View>
-          <Text style={title}>Welcome {email}</Text>
+          <Text style={title}>User: {email}</Text>
           <Button onPress={Actions.search} title="Go to Search" />
           <Button onPress={Actions.todolist} title="Start To-Do List" />
         </View>
