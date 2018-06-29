@@ -6,6 +6,8 @@ import { styles } from "../BasicForm/styles";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { Actions } from "react-native-router-flux";
 
+const FIREBASE_LOGO = require("../../../../assets/icons/firebase.png");
+
 export class SignupFormComponent extends Component {
   componentDidUpdate(prevProps) {
     if (this.props.registered) Actions.reset("home");
@@ -17,13 +19,7 @@ export class SignupFormComponent extends Component {
     return (
       <KeyboardAwareScrollView style={scrollView}>
         <View style={imageBox}>
-          <Image
-            style={image}
-            source={{
-              uri:
-                "https://appjoy.org/wp-content/uploads/2016/06/firebase-authentication-logo1.png"
-            }}
-          />
+          <Image style={image} source={FIREBASE_LOGO} />
         </View>
         <View style={loginBox}>
           {loading ? (

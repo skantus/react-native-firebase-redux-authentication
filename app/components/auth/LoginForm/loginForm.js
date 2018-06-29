@@ -6,6 +6,8 @@ import { styles } from "../BasicForm/styles";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { Actions } from "react-native-router-flux";
 
+const FIREBASE_LOGO = require("../../../../assets/icons/firebase.png");
+
 export class LoginFormComponent extends Component {
   componentDidMount() {
     this.props.restore();
@@ -25,13 +27,7 @@ export class LoginFormComponent extends Component {
     return (
       <KeyboardAwareScrollView style={scrollView}>
         <View style={imageBox}>
-          <Image
-            style={image}
-            source={{
-              uri:
-                "https://lh3.googleusercontent.com/-whXBCDVxIto/Vz2Rsyz-UjI/AAAAAAAAiJc/UjvR-M2b9tY5SyKFkDY6Q_MbusEINRXkQ/w530-h530-n/Firebase_16-logo.png"
-            }}
-          />
+          <Image style={image} source={FIREBASE_LOGO} />
         </View>
         <View style={loginBox}>
           {loading ? (

@@ -25,7 +25,7 @@ export class BasicFormComponent extends Component {
       <View>
         <TextInput
           style={textInput}
-          placeholder="email"
+          placeholder="Email"
           returnKeyType="next"
           keyboardType="email-address"
           autoCapitalize="none"
@@ -36,7 +36,7 @@ export class BasicFormComponent extends Component {
 
         <TextInput
           style={textInput}
-          placeholder="password"
+          placeholder="Password"
           secureTextEntry={true}
           returnKeyType="done"
           onChangeText={this.handlePasswordChange}
