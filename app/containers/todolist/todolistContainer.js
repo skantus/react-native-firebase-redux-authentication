@@ -1,9 +1,9 @@
-import { connect } from 'react-redux';
-import { TodoList } from '../../components/todolist/todolist';
-import { Add, Remove } from '../../actions/todolist/actions';
+import { connect } from "react-redux";
+import { TodoList } from "../../components/todolist/todolist";
+import { Add, Remove } from "../../actions/todolist/actions";
 
-const mapStateToProps = state => ({
-  todos: state.todolistReducer.todos
+const mapStateToProps = ({ todolistReducer: { todos } }) => ({
+  todos: todos
 });
 
 const mapDispatchToProps = {
@@ -11,4 +11,7 @@ const mapDispatchToProps = {
   onRemove: Remove
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList);

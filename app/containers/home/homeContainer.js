@@ -1,15 +1,18 @@
-import { connect } from 'react-redux';
-import { Home } from '../../components/home/home';
+import { connect } from "react-redux";
+import { Home } from "../../components/home/home";
 
-import { logoutUser } from '../../actions/session/actions';
+import { logoutUser } from "../../actions/session/actions";
 
-const mapStateToProps = state => ({
-  routes: state.routes,
-  user: state.sessionReducer.user,
+const mapStateToProps = ({ routes, sessionReducer }) => ({
+  routes: routes,
+  user: sessionReducer.user
 });
 
 const mapDispatchToProps = {
-  logout: logoutUser,
+  logout: logoutUser
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
