@@ -1,19 +1,17 @@
-import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
-import styles from './styles';
+import React from "react";
+import { View, ActivityIndicator } from "react-native";
+import styles from "./styles";
 
 export class LoadingIndicator extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    return(
+    const { size, color } = this.props;
+    return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator style={styles.loadingIndicator}
-                           size={this.props.size}
-                           color={this.props.color}/>
+        <ActivityIndicator
+          style={styles.loadingIndicator}
+          size={size}
+          color={color}
+        />
       </View>
     );
   }
