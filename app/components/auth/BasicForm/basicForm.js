@@ -1,52 +1,51 @@
-import React, { Component } from 'react';
-import { View, TextInput, TouchableOpacity, Text } from 'react-native';
-import { styles } from './styles';
+import React, { Component } from "react";
+import { View, TextInput, TouchableOpacity, Text } from "react-native";
+import { styles } from "./styles";
 
 export class BasicFormComponent extends Component {
+  state = { email: "", password: "" };
 
-  constructor(props) {
-    super(props);
+  handleEmailChange = email => {
+    this.setState({ email });
+  };
 
-    this.state = { email: '', password: '' };
+  handlePasswordChange = password => {
+    this.setState({ password });
+  };
 
-    this.handleEmailChange = (email) => {
-      this.setState({ email: email });
-    }
-
-    this.handlePasswordChange = (password) => {
-      this.setState({ password: password });
-    }
-
-    this.handleButtonPress = () => {
-      this.props.onButtonPress(this.state.email, this.state.password);
-    }
-  }
+  handleButtonPress = () => {
+    const { email, password } = this.state;
+    this.props.onButtonPress(email, password);
+  };
 
   render() {
     const { email, password } = this.state;
+    const { textInput, button, buttonTitle } = styles;
     return (
       <View>
         <TextInput
-          style={styles.textInput}
-          placeholder='email'
-          returnKeyType='next'
-          keyboardType='email-address'
-          autoCapitalize='none'
+          style={textInput}
+          placeholder="email"
+          returnKeyType="next"
+          keyboardType="email-address"
+          autoCapitalize="none"
           onChangeText={this.handleEmailChange}
           value={email}
-          underlineColorAndroid={'transparent'} />
+          underlineColorAndroid={"transparent"}
+        />
 
         <TextInput
-          style={styles.textInput}
-          placeholder='password'
+          style={textInput}
+          placeholder="password"
           secureTextEntry={true}
-          returnKeyType='done'
+          returnKeyType="done"
           onChangeText={this.handlePasswordChange}
           value={password}
-          underlineColorAndroid={'transparent'} />
+          underlineColorAndroid={"transparent"}
+        />
 
-        <TouchableOpacity style={styles.button} onPress={this.handleButtonPress}>
-          <Text style={styles.buttonTitle}>{this.props.buttonTitle}</Text>
+        <TouchableOpacity style={button} onPress={this.handleButtonPress}>
+          <Text style={buttonTitle}>{this.props.buttonTitle}</Text>
         </TouchableOpacity>
       </View>
     );
