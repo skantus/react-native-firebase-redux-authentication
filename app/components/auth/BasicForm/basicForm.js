@@ -1,17 +1,13 @@
-import React, { Component } from "react";
-import { View, TextInput, TouchableOpacity, Text } from "react-native";
-import { styles } from "./styles";
+import React, { Component } from 'react';
+import { View, TextInput, TouchableOpacity, Text } from 'react-native';
+import { styles } from './styles';
 
 export class BasicFormComponent extends Component {
-  state = { email: "", password: "" };
+  state = { email: '', password: '' };
 
-  handleEmailChange = email => {
-    this.setState({ email });
-  };
+  handleEmailChange = email => this.setState({ email });
 
-  handlePasswordChange = password => {
-    this.setState({ password });
-  };
+  handlePasswordChange = password => this.setState({ password });
 
   handleButtonPress = () => {
     const { email, password } = this.state;
@@ -31,7 +27,7 @@ export class BasicFormComponent extends Component {
           autoCapitalize="none"
           onChangeText={this.handleEmailChange}
           value={email}
-          underlineColorAndroid={"transparent"}
+          underlineColorAndroid={'transparent'}
         />
 
         <TextInput
@@ -41,7 +37,7 @@ export class BasicFormComponent extends Component {
           returnKeyType="done"
           onChangeText={this.handlePasswordChange}
           value={password}
-          underlineColorAndroid={"transparent"}
+          underlineColorAndroid={'transparent'}
         />
 
         <TouchableOpacity style={button} onPress={this.handleButtonPress}>
