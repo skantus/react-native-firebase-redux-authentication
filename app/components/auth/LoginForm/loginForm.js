@@ -1,14 +1,16 @@
-import React, { Component } from "react";
-import { View, Alert, Image, Button } from "react-native";
-import { BasicFormComponent } from "../BasicForm/basicForm";
-import { LoadingIndicator } from "../../loadingIndicator/loadingIndicator";
-import { styles } from "../BasicForm/styles";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { Actions } from "react-native-router-flux";
+import React, { Component } from 'react';
+import { View, Alert, Image, Button } from 'react-native';
+import { connect } from 'react-redux';
+import { BasicFormComponent } from '../BasicForm/basicForm';
+import { LoadingIndicator } from 'components/loadingIndicator/loadingIndicator';
+import { styles } from '../BasicForm/styles';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { Actions } from 'react-native-router-flux';
+import { loginUser, restoreSession } from '../../../actions/session/actions';
 
-const FIREBASE_LOGO = require("../../../../assets/icons/firebase.png");
+const FIREBASE_LOGO = require('icons/firebase.png');
 
-export class LoginFormComponent extends Component {
+class LoginFormComponent extends Component {
   componentDidMount() {
     this.props.restore();
   }
@@ -16,9 +18,9 @@ export class LoginFormComponent extends Component {
   componentDidUpdate(prevProps) {
     const { error, logged } = this.props;
 
-    if (!prevProps.error && error) Alert.alert("error", error);
+    if (!prevProps.error && error) Alert.alert('error', error);
 
-    if (logged) Actions.reset("home");
+    if (logged) Actions.reset('home');
   }
 
   render() {
@@ -33,15 +35,30 @@ export class LoginFormComponent extends Component {
           {loading ? (
             <LoadingIndicator color="#ffffff" size="large" />
           ) : (
-            <BasicFormComponent buttonTitle={"login"} onButtonPress={login} />
+            <BasicFormComponent buttonTitle={'login'} onButtonPress={login} />
           )}
         </View>
-        <View>
-          {loading ? null : (
-            <Button onPress={Actions.signup} title="Signup" color="white" />
-          )}
-        </View>
+        <View>{loading ? null : <Button onPress={Actions.signup} title="Signup" color="white" />}</View>
       </KeyboardAwareScrollView>
     );
   }
 }
+
+const mapStateToProps = ({ routes, sessionReducer: { restoring, loading, user, error, logged } }) => ({
+  routes: routes,
+  restoring: restoring,
+  loading: loading,
+  user: user,
+  error: error,
+  logged: logged
+});
+
+const mapDispatchToProps = {
+  login: loginUser,
+  restore: restoreSession
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginFormComponent);

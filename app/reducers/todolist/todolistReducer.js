@@ -1,7 +1,7 @@
-import * as types from "../../actions/todolist/actionTypes";
+import * as types from '../../actions/todolist/actionTypes';
 
 const initialState = {
-  todos: ["Learn React", "Learn Redux", "Learn Firebase", "Learn Graphql"]
+  todos: ['Learn React', 'Learn Redux', 'Learn Firebase', 'Learn Graphql']
 };
 
 const todolistReducer = (state = initialState, action) => {

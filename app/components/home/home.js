@@ -1,15 +1,17 @@
-import React, { Component } from "react";
-import { View, Button, Image, Text } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
-import { styles } from "./styles";
-import { Actions } from "react-native-router-flux";
-import { LoadingIndicator } from "../loadingIndicator/loadingIndicator";
+import React, { Component } from 'react';
+import { View, Button, Image, Text } from 'react-native';
+import { connect } from 'react-redux';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { styles } from './styles';
+import { Actions } from 'react-native-router-flux';
+import { LoadingIndicator } from 'components/loadingIndicator/loadingIndicator';
+import { logoutUser } from '../../actions/session/actions';
 
-export class Home extends React.Component {
+class Home extends Component {
   logout = () => {
     this.props.logout();
     setTimeout(() => {
-      Actions.reset("login");
+      Actions.reset('login');
     }, 100);
   };
 
@@ -38,3 +40,17 @@ export class Home extends React.Component {
     );
   }
 }
+
+const mapStateToProps = ({ routes, sessionReducer }) => ({
+  routes: routes,
+  user: sessionReducer.user
+});
+
+const mapDispatchToProps = {
+  logout: logoutUser
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

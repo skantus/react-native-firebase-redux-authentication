@@ -1,4 +1,4 @@
-import * as types from "./actionTypes";
+import * as types from './actionTypes';
 
 export const Add = item => dispatch => {
   dispatch(add(item));

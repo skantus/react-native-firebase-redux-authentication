@@ -1,12 +1,12 @@
-import * as firebase from "firebase";
+import * as firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyBx0YuFCeqedFUGgpmdZOr7T7wGzy9N8Qo",
-  authDomain: "pulso-3f393.firebaseapp.com",
-  databaseURL: "https://pulso-3f393.firebaseio.com",
-  projectId: "pulso-3f393",
-  storageBucket: "pulso-3f393.appspot.com",
-  messagingSenderId: "677974717412"
+  apiKey: 'AIzaSyBx0YuFCeqedFUGgpmdZOr7T7wGzy9N8Qo',
+  authDomain: 'pulso-3f393.firebaseapp.com',
+  databaseURL: 'https://pulso-3f393.firebaseio.com',
+  projectId: 'pulso-3f393',
+  storageBucket: 'pulso-3f393.appspot.com',
+  messagingSenderId: '677974717412'
 };
 
 let instance = null;

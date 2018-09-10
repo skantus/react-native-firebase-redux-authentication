@@ -1,5 +1,5 @@
-import firebaseService from "../../enviroments/firebase";
-import * as types from "./actionsTypes";
+import firebaseService from '../../enviroments/firebase';
+import * as types from './actionsTypes';
 
 export const restoreSession = () => dispatch => {
   dispatch(sessionLoading());

@@ -1,16 +1,18 @@
-import React, { Component } from "react";
-import { View, Alert, Image } from "react-native";
-import { BasicFormComponent } from "../BasicForm/basicForm";
-import { LoadingIndicator } from "../../loadingIndicator/loadingIndicator";
-import { styles } from "../BasicForm/styles";
-import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import { Actions } from "react-native-router-flux";
+import React, { Component } from 'react';
+import { View, Alert, Image } from 'react-native';
+import { connect } from 'react-redux';
+import { BasicFormComponent } from '../BasicForm/basicForm';
+import { LoadingIndicator } from 'components/loadingIndicator/loadingIndicator';
+import { styles } from '../BasicForm/styles';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { Actions } from 'react-native-router-flux';
+import { signupUser } from '../../../actions/session/actions';
 
-const FIREBASE_LOGO = require("../../../../assets/icons/firebase.png");
+const FIREBASE_LOGO = require('icons/firebase.png');
 
-export class SignupFormComponent extends Component {
+class SignupFormComponent extends Component {
   componentDidUpdate(prevProps) {
-    if (this.props.registered) Actions.reset("home");
+    if (this.props.registered) Actions.reset('home');
   }
 
   render() {
@@ -25,10 +27,26 @@ export class SignupFormComponent extends Component {
           {loading ? (
             <LoadingIndicator color="#ffffff" size="large" />
           ) : (
-            <BasicFormComponent buttonTitle={"signup"} onButtonPress={signup} />
+            <BasicFormComponent buttonTitle={'signup'} onButtonPress={signup} />
           )}
         </View>
       </KeyboardAwareScrollView>
     );
   }
 }
+
+const mapStateToProps = ({ routes, sessionReducer: { loading, error, registered } }) => ({
+  routes: routes,
+  loading: loading,
+  error: error,
+  registered: registered
+});
+
+const mapDispatchToProps = {
+  signup: signupUser
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignupFormComponent);
