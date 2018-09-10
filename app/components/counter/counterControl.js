@@ -1,16 +1,13 @@
 import React, { Component } from "react";
-import { View } from "react-native";
-import { Button, Text } from "native-base";
+import { View, Text, Button } from "react-native";
 import { styles } from "./styles";
 
-export class CounterControl extends React.Component {
+export class CounterControl extends Component {
   render() {
     const { clicked, label } = this.props;
     return (
       <View style={styles.marginBox}>
-        <Button transparent onPress={clicked}>
-          <Text>{label}</Text>
-        </Button>
+        <Button title={label} onPress={clicked} />
       </View>
     );
   }
