@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { styles } from './styles';
-import { Add, Remove } from '../../actions/todolist/actions';
+import { Add, Remove } from 'actions/todolist/actions';
 
 import { TodolistInput } from './todolistInput';
 import { TodoListItems } from './todolistItems';

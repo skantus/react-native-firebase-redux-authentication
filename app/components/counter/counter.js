@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { styles } from './styles';
 import { CounterControl } from './counterControl';
 import { CounterOutput } from './counterOutput';
-import { Increment, Decrement, Add, Subtration } from '../../actions/counter/actions';
+import { Increment, Decrement, Add, Subtration } from 'actions/counter/actions';
 
 export class Counter extends React.Component {
   addNumber = () => this.props.onAdd(5);

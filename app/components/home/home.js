@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from './styles';
 import { Actions } from 'react-native-router-flux';
 import { LoadingIndicator } from 'components/loadingIndicator/loadingIndicator';
-import { logoutUser } from '../../actions/session/actions';
+import { logoutUser } from 'actions/session/actions';
 
 class Home extends Component {
   logout = () => {

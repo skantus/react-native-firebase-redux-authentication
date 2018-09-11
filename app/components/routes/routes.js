@@ -10,7 +10,7 @@ import SessionContainer from 'components/auth/LoginForm';
 import SignupContainer from 'components/auth/SignupForm';
 import TodolistContainer from 'components/todolist';
 
-import { configureStore } from '../../store/store';
+import configureStore from 'store';
 
 const store = configureStore();
 const RouterRedux = connect()(Router);

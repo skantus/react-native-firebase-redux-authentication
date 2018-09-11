@@ -1,4 +1,4 @@
-import * as types from '../../actions/session/actionsTypes';
+import * as types from 'actions/session/actionsTypes';
 
 const initialState = {
   restoring: false,

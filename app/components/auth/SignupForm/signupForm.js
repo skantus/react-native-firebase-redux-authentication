@@ -6,7 +6,7 @@ import { LoadingIndicator } from 'components/loadingIndicator/loadingIndicator';
 import { styles } from '../BasicForm/styles';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { Actions } from 'react-native-router-flux';
-import { signupUser } from '../../../actions/session/actions';
+import { signupUser } from 'actions/session/actions';
 
 const FIREBASE_LOGO = require('icons/firebase.png');
 
