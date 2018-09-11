@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cdn-images-1.medium.com/max/1200/1*k6t2bT83IppZXiSfWW5ixg.png" width="400"/>
+<img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/rfr.jpg" width="640"/>
 </p>
 
 <p align="center">
