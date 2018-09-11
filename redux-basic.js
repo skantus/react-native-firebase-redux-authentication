@@ -1,5 +1,4 @@
-const redux = require("redux");
-const createStore = redux.createStore;
+import { createStore } from 'redux';
 
 const initialState = {
   counter: 0
@@ -8,9 +7,9 @@ const initialState = {
 // Reducer
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "INC":
+    case 'INC':
       return { ...state, counter: state.counter + 1 };
-    case "ADD":
+    case 'ADD':
       return { ...state, counter: state.counter + action.value };
     default:
       return state;
@@ -23,9 +22,9 @@ const store = createStore(rootReducer);
 
 // Susbcription
 store.subscribe(() => {
-  console.log("[Susbcription]", store.getState());
+  console.log('[Susbcription]', store.getState());
 });
 
 // Actions (dispatch)
-store.dispatch({ type: "INC" });
-store.dispatch({ type: "ADD", value: 10 });
+store.dispatch({ type: 'INC' });
+store.dispatch({ type: 'ADD', value: 10 });
