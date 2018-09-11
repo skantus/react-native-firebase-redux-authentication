@@ -15,7 +15,7 @@ import { configureStore } from '../../store/store';
 const store = configureStore();
 const RouterRedux = connect()(Router);
 
-export class Routes extends React.Component {
+export default class Routes extends React.Component {
   render() {
     return (
       <Provider store={store}>
