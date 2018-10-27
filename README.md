@@ -3,12 +3,15 @@
 </p>
 
 <p align="center">
+  <img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/1.png" width="250"/>  
+  <img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/2.png" width="250"/>
+  <img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/3.png" width="250"/>
+</p>
+
+<p align="center">
     <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/rnredux.gif" width="223"/>  
   <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4699.JPG" width="250"/>
   <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4728.JPG" width="250"/>
-   <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4700.JPG" width="250"/>
-     <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4729.JPG" width="250"/>
-     <img src="https://github.com/skantus/React-Native-Firebase-Redux-Authentication/blob/master/assets/screenshots/IMG_4730.JPG" width="250"/>
 </p>
 
 ## Install
