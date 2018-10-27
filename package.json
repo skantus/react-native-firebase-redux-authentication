@@ -10,13 +10,13 @@
     "firebase": "^5.4.2",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
-    "react": "16.4.1",
-    "react-native": "0.56.1",
+    "react": "^16.6.0",
+    "react-native": "^0.57.3",
     "react-native-keyboard-aware-scroll-view": "^0.7.2",
-    "react-native-router-flux": "^4.0.1",
-    "react-native-vector-icons": "^5.0.0",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
+    "react-native-router-flux": "^4.0.5",
+    "react-native-vector-icons": "^6.0.2",
+    "react-redux": "^5.1.0",
+    "redux": "^4.0.1",
     "redux-devtools": "^3.4.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
@@ -24,20 +24,21 @@
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
-    "babel-preset-react-native": "5.0.2",
     "babel-eslint": "^9.0.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "eslint": "^5.5.0",
     "eslint-config-prettier": "^3.0.1",
-    "eslint-import-resolver-babel-module": "^4.0.0",
+    "eslint-import-resolver-babel-module": "^5.0.0-beta.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.11.1",
+    "metro-react-native-babel-preset": "^0.48.1",
     "prettier": "^1.14.2",
     "jest": "23.6.0",
     "react-test-renderer": "16.4.1"
   },
-  "jest": {
-    "preset": "react-native"
+  "preset": "react-native",
+  "transform": {
+    "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
   }
 }
