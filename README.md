@@ -16,8 +16,10 @@
 
 ## Install
 
-1. _npm i_
-2. _react-native run-ios_ or _react-native run-android_
+1. cd && rm -rf .rncache
+2. watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf $TMPDIR/haste-map-react-native-packager-* && rm -rf node_modules/ && npminstall
+3. npm start -- --reset-cache
+4. react-native run-ios
 
 ## Expo
 
