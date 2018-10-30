@@ -1,3 +1,11 @@
+## Current versions:
+
+```
+react-native: 0.57.4
+react: 16.6.0
+redux: 4.0.1
+```
+
 <p align="center">
 <img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/rfr.jpg" width="640"/>
 </p>
