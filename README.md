@@ -4,6 +4,7 @@
 react-native: 0.57.4
 react: 16.6.0
 redux: 4.0.1
+react-native-router-flux: 4.0.5
 ```
 
 <p align="center">
