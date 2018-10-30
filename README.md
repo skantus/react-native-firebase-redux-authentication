@@ -24,6 +24,10 @@
 
 ## Expo
 
+_See the project too in:_
+
+<img src="https://cdn-images-1.medium.com/max/1920/1*EKXYhntirnqHjXdTGmLXyw.png" />
+
 https://expo.io/@skantus/
 
 ## Login method
