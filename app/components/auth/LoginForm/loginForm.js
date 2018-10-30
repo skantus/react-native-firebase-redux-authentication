@@ -38,7 +38,7 @@ class LoginFormComponent extends Component {
             <BasicFormComponent buttonTitle={'login'} onButtonPress={login} />
           )}
         </View>
-        <View>{loading ? null : <Button onPress={Actions.signup} title="Signup" color="white" />}</View>
+        <View>{loading ? null : <Button onPress={Actions.signup} title="Signup" />}</View>
       </KeyboardAwareScrollView>
     );
   }
