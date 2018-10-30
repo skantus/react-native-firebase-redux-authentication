@@ -17,7 +17,7 @@ describe('CounterReducer', () => {
     it('Should handle DECREMENT action', () => {
       let state = { counter: 1 };
       expect(counterReducer(state, { type: 'DECREMENT' })).toMatchSnapshot({
-        counter: -1
+        counter: 0
       });
     });
 
