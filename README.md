@@ -1,7 +1,5 @@
-## Current versions:
-
 <p align="center">
-<img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/rfr.jpg" width="640"/>
+<img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/rfr.jpg" width="800"/>
 </p>
 
 <p align="center">
