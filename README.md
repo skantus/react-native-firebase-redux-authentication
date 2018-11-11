@@ -1,12 +1,5 @@
 ## Current versions:
 
-```
-react-native: 0.57.4
-react: 16.6.0
-redux: 4.0.1
-react-native-router-flux: 4.0.5
-```
-
 <p align="center">
 <img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/rfr.jpg" width="640"/>
 </p>
