@@ -17,8 +17,10 @@
 ## Install
 
 1. `git clone https://github.com/skantus/react-native-firebase-redux-authentication.git`
-2. `npm i`
-3. `react-native run-ios` or `run-android`
+2. `cd && rm -rf .rncache`
+3. `watchman watch-del-all && rm -rf $TMPDIR/react-* && rm -rf $TMPDIR/haste-map-react-native-packager-* && rm -rf node_modules/ && npm install`
+4. `npm start -- --reset-cache`
+5. `react-native run-ios | run-android`
 
 ## Expo
 
