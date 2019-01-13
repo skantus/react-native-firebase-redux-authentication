@@ -8,7 +8,7 @@
   <img src="https://github.com/skantus/react-native-firebase-redux-authentication/blob/master/assets/screenshots/3.png" width="250"/>
 </p>
 
-## Install
+## How to Install
 
 1. `git clone https://github.com/skantus/react-native-firebase-redux-authentication.git`
 2. `cd && rm -rf .rncache`
